@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         let leadingConstraint = colorView.leadingAnchor.constraintEqualToAnchor(self.view.leadingAnchor);
         let trailingConstraint = colorView.trailingAnchor.constraintEqualToAnchor(self.view.trailingAnchor);
         let topConstraint = colorView.topAnchor.constraintEqualToAnchor(self.view.topAnchor);
-        let bottomConstraint = colorView.bottomAnchor.constraintEqualToAnchor(self.view.bottomAnchor);
+        let bottomConstraint = colorView.bottomAnchor.constraintEqualToAnchor(self.view.bottomAnchor, constant: -50);
         
         initialConstraints.appendContentsOf([leadingConstraint,trailingConstraint,topConstraint,bottomConstraint]);
         
