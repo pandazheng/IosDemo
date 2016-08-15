@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocateDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MIc-Rq-gUe">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="437"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOD-ij-LVb">
+                                <rect key="frame" x="220" y="472" width="160" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="BQm-5a-4Qt"/>
+                                </constraints>
+                                <state key="normal" title="Update Locating"/>
+                                <connections>
+                                    <action selector="updateLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s3r-jE-GRW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28a-kR-TZ1">
+                                <rect key="frame" x="215" y="527" width="171" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="171" id="tuD-Sd-HVF"/>
+                                </constraints>
+                                <state key="normal" title="Share Locating"/>
+                                <connections>
+                                    <action selector="shareLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LD5-1Z-WZV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MIc-Rq-gUe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ERg-jh-ei3"/>
+                            <constraint firstAttribute="trailing" secondItem="MIc-Rq-gUe" secondAttribute="trailing" id="HiQ-Ky-Oyz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MIc-Rq-gUe" secondAttribute="bottom" constant="163" id="l3B-ox-GNk"/>
+                            <constraint firstItem="VOD-ij-LVb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nhP-0n-x9l"/>
+                            <constraint firstItem="VOD-ij-LVb" firstAttribute="top" secondItem="MIc-Rq-gUe" secondAttribute="bottom" constant="35" id="ogi-aR-mwG"/>
+                            <constraint firstItem="28a-kR-TZ1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vrl-ZX-aSB"/>
+                            <constraint firstItem="28a-kR-TZ1" firstAttribute="top" secondItem="VOD-ij-LVb" secondAttribute="bottom" constant="25" id="xcv-Nh-j0z"/>
+                            <constraint firstItem="MIc-Rq-gUe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yvk-CY-cZy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="MIc-Rq-gUe" id="GeQ-bY-PCg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="239" y="186"/>
+        </scene>
+    </scenes>
+</document>
